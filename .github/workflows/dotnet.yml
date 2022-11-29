@@ -25,3 +25,9 @@ jobs:
       
     - name: Publish
       run: dotnet publish -r win-x64 -c Release /p:PublishSingleFile=true
+      
+    - name: Upload Build Artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: SportclubApp
+        path: /home/runner/work/Sportclub/Sportclub/bin/Release/net6.0-windows/win-x64/publish/
